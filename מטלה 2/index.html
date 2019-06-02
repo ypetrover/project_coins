@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>coins rate</title>
+</head>
+
+<body>
+    <div id="processing">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div id="modal">
+        <div id="modalContent">
+            <div id="modalHeader">
+                <p id="msgModal"></p>
+            </div>
+            <ul id="ul"></ul>
+            <div id="modalBtn">
+                <button class="btn btn-primary" id="cls" type="button" onclick="cls()">Update & Close</button>
+                <button class="btn btn-primary" id="cancel" type="button" onclick="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="btn-group form-inline" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-info" id="home">Home</button>
+            <button type="button" class="btn btn-outline-info" id="live">Live report</button>
+            <button type="button" class="btn btn-outline-info" id="about">About</button>
+        </div>
+        <form class="form-inline">
+            <div class="autocomplete" style="width:300px;">
+                <input onkeyup="smartSearch()" id="searchInput" class="form-control" type="text"
+                    placeholder="Smart-Search" aria-label="Search" autocomplete="off" disabled="true">
+            </div>
+        </form>
+        <div class="btn-group form-inline" role="group" aria-label="Basic example">
+            <button type="button" onclick="showSelected()" class="btn btn-outline-info" id="search">Show seleced
+                coins</button>
+            <button type="button" onclick="clearSelected()" class="btn btn-outline-info" id="clearAllSelected">Clear seleced
+                coins</button>
+        </div>
+    </nav>
+    <section id="root"></section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <script src="search.js"></script>
+    <script src="liveReport.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="about.js"></script> -->
+</body>
+
+</html>
